@@ -1,0 +1,50 @@
+ <?php
+if(isset($_POST['btnok']))
+{
+	$Venue_Name=$_POST['Venue_Name'];
+	$Venue_Img=$_POST['Venue_Img'];
+	$Stadium_Capacity=$_POST['Stadium_Capacity'];
+	$Established_Date=$_POST['Established_Date'];
+	$Facilities_Name=$_POST['Facilities_Name'];
+	$Ground_Size=$_POST['Ground_Size'];
+	$Pitch_Condition=$_POST['Pitch_Condition'];
+	$Match_Played=$_POST['Match_Played'];
+	$Venue_City=$_POST['Venue_City'];
+	$Venue_Ctry=$_POST['Venue_Ctry'];
+	$result=mysqli_connect("localhost","root","","sports_db");
+	
+    $query="INSERT into venue__tbl values('','$Venue_Name','$Venue_Img','$Stadium_Capacity','$Established_Date','$Facilities_Name','$Ground_Size','$Pitch_Condition','$Match_Played','$Venue_City','$Venue_Ctry')";
+	
+	$c=mysqli_query($result,$query);
+    if($c)
+	{	
+        echo "Successfully Inserted";
+	}
+	else
+	{
+		echo "Error";
+	}	
+}								
+?>
+
+<html>
+    <form action="#" method="POST">
+	<input type="text" name="Venue_Name" required placeholder="Enter Venue name"/><br/><br/>
+	<label>Enter Venue Image:</label></br>
+	<input type="file" name="Venue_Img" required placeholder="Enter Venue Image"/><br/><br/>
+	<input type="text" name="Stadium_Capacity" required placeholder="Enter Stadium Capacity"/><br/><br/>
+	<label>Enter Established  Date Image:</label></br>
+	<input type="date" name="Established_Date" required placeholder="Enter Established Date"/><br/><br/>
+	<input type="text" name="Facilities_Name" required placeholder="Enter Facilities Name"/><br/><br/>
+	<input type="text" name="Ground_Size" required placeholder="Enter Ground Size"/><br/><br/>
+	<input type="text" name="Pitch_Condition" required placeholder="Enter Pitch Condition"/><br/><br/>
+	<input type="text" name="Match_Played" required placeholder="Enter Match Played"/><br/><br/>
+	<input type="text" name="Venue_City" required placeholder="Enter Venue City"/><br/><br/>
+	<input type="text" name="Venue_Ctry" required placeholder="Enter Venue Country"/><br/><br/>
+	<br/><br/>
+    <br/><br/>
+	
+	<input type="submit" name="btnok" value="INSERT"/>
+	
+	</form>
+</html>

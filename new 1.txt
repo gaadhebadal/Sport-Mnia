@@ -1,0 +1,61 @@
+<?php
+    include "header.php";
+?>
+
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<!-- //market-->
+		<!-- //market-->
+		<section class="wrapper">
+		<div class="table-agile-info">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Responsive Table
+    </div>
+    
+    <div class="table-responsive">
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+    
+            <th>Category_ID</th>
+            <th>Category_Name</th>
+            <th>Image</th>
+			<th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+		 <tr>
+            <td>1</td>
+            <td>xyz</td>
+            <td>1.jpg</td>
+            <td>Edit Delete</td>
+           </tr>
+          
+		  <tr>
+            <td>2</td>
+            <td>abc</td>
+            <td>2.jpg</td>
+            <td>Edit Delete</td>
+           </tr>
+		   <tr>
+            <td>3</td>
+            <td>cba</td>
+            <td>3.jpg</td>
+            <td>Edit Delete</td>
+           </tr>
+		   
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</section>
+				
+</div>
+</section>
+	
+<?php
+    include "footer.php";
+?>
